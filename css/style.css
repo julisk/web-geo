@@ -1,3 +1,11 @@
+:root {
+  --font-text: "PT Sans", sans-serif;
+  --font-title: "Roboto Condensed", sans-serif;
+  --text-decor: "Lobster", sans-serif;
+  --color-title: #ffffff;
+  --accent: #23c1ab;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -6,11 +14,21 @@ html {
 *::after {
   box-sizing: inherit;
 }
+body {
+  font-family: var(--font-text);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
 
 .list {
   list-style: none;
+  padding: 0px;
 }
 .link {
+  display: block;
   text-decoration: none;
   margin: 0px;
 }
@@ -21,30 +39,126 @@ html {
   margin-right: auto;
   margin-left: auto;
 }
+.title {
+  padding: 0px;
+  margin: 0px;
+}
+/* Header */
+
+.header {
+  background-image: linear-gradient(rgba(54, 55, 58), rgba(75, 74, 77)),
+    url(../images/geo-decor.png);
+}
+
 .container-header {
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.logo {
+  margin-right: 20px;
+  transition: transform 250ms linear;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+.name {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: var(--color-title);
+  margin-right: 60px;
+  transition: transform 250ms linear;
+}
+.name-decor {
+  color: #23c1ab;
+}
+.name:hover {
+  transform: scale(1.05);
 }
 
 .hedear-navigation {
   display: flex;
+  align-items: center;
 }
 
 .list-naigation {
   display: flex;
+  padding: 0px;
+}
+.list-nav-item-link {
+  font-size: 16px;
+  color: var(--color-title);
+}
+.list-nav-item-link:hover {
+  color: var(--accent);
 }
 
-.lang--list {
+.list-nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.lang-list {
   display: flex;
+}
+.lang-list-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.lang-list-item-link {
+  color: var(--color-title);
 }
 
 /* секція Hero */
 .hero {
-  background-image: url(./images/carpathians-home.jpg);
+  height: 500px;
+  background-image: url(../images/carpathians-home.jpg);
   background-position: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  text-align: right;
+  background-size: cover;
+  padding-top: 270px;
+  padding-bottom: 20px;
+  padding-right: 0px;
+}
+.container-hero {
+  display: flex;
+  justify-content: flex-end;
+  height: 800px;
+}
+
+.hero-text {
+  width: 60%;
+  padding: 15px;
+  height: 200px;
+  background-color: rgba(35, 193, 171, 0.5);
+  text-align: left;
+}
+.hero-text-decor {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: var(--text-decor);
+  font-weight: 300;
+  font-size: 35px;
+  line-height: 35px;
+  color: var(--color-title);
+}
+.hero-title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: var(--font-title);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35px;
+  color: var(--color-title);
+}
+.hero-subtitle {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 35px;
+  color: var(--color-title);
 }
 
 /* секція Новини */
